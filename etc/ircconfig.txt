@@ -1,0 +1,7 @@
+{
+"Server":"myserver:444",
+"Name":"myname",
+"User":"myname",
+"Password":"mypassword",
+"RoomName":"#emacs"
+}
