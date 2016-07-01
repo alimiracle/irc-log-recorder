@@ -45,8 +45,8 @@ chmod +x install
 sudo ./install
 
 to config the programme 
-open /var/logs/ircconfig.txt as root
-sudo nano /var/logs/ircconfig.txt
+open /etc/ircconfig.txt as root
+sudo nano /etc/ircconfig.txt
 
 replace my server:444 with your irc server and port
 replace my name with your bot name

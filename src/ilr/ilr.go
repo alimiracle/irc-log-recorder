@@ -1,6 +1,6 @@
 /*
 * irc log recorder
-* irc bot to  Watching Everything that happens in the irc channel  and record it in log and its have web server To enable users to access the logs from Web Browser and telnet
+* irc bot to  Watching Everything that happens in the irc channel and record it in log and its have web server To enable users to access the logs from Web Browser and telnet
 * Copyright (c) 2016 ali abdul ghani <blade.vp2020@gmail.com>
 *    This Program is free software: you can redistribute it and/or modify
 *    it under the terms of the GNU  General Public License as published by
@@ -10,7 +10,7 @@
 *    but WITHOUT ANY WARRANTY; without even the implied warranty of
 *    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 *    GNU General Public License for more details.
- *    You should have received a copy of the GNU General Public License
+*    You should have received a copy of the GNU General Public License
 *    along with this library.  If not, see <http://www.gnu.org/licenses/>.
 */
 
@@ -74,8 +74,8 @@ os.Remove("temp.txt")
 }
 
 func server() {
-    http.HandleFunc("/", handler)
-    http.ListenAndServe(":8080", nil)
+    http.HandleFunc("/log", handler)
+    http.ListenAndServe(":80", nil)
 }
 
 func main() {
@@ -84,6 +84,7 @@ file, err := os.Open("/etc/ircconfig.txt")
  if err != nil {
  log.Fatal(err)
  }
+
 var all CONFIG
 
  data, err := ioutil.ReadAll(file)
@@ -112,6 +113,26 @@ con.Password = all.Password
 f.WriteString(e.Nick)
 f.WriteString(" is joined in ")
 f.WriteString(all.RoomName)
+f.WriteString("\n")
+    })
+    con.AddCallback("QUIT", func (e *irc.Event) {
+f.WriteString(e.Nick)
+f.WriteString(" is Quit in ")
+t := time.Now()
+f.WriteString(" ")
+f.WriteString(t.String())
+f.WriteString(" ")
+f.WriteString(e.Message())
+f.WriteString("\n")
+    })
+    con.AddCallback("QUIT", func (e *irc.Event) {
+f.WriteString(e.Nick)
+f.WriteString(" is Quit in ")
+t := time.Now()
+f.WriteString(" ")
+f.WriteString(t.String())
+f.WriteString(" ")
+f.WriteString(e.Message())
 f.WriteString("\n")
     })
     con.AddCallback("PRIVMSG", func (e *irc.Event) {
