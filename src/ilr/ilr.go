@@ -27,6 +27,8 @@ import (
  "log"
 )
 type CONFIG struct {
+Url string
+Port string
 Server string
 Name string
 User string
@@ -73,9 +75,9 @@ file.Close()
 os.Remove("temp.txt")
 }
 
-func server() {
-    http.HandleFunc("/log", handler)
-    http.ListenAndServe(":80", nil)
+func server(Url, Port string) {
+    http.HandleFunc(Url, handler)
+    http.ListenAndServe(Port, nil)
 }
 
 func main() {
@@ -100,7 +102,7 @@ if err != nil {
 }
 f.WriteString("<html>\n")
 f.WriteString("<title> uruk bot </title>\n")
-go server()
+go server(all.Url, all.Port)
     con := irc.IRC(all.Name, all.User)
 con.Password = all.Password
 

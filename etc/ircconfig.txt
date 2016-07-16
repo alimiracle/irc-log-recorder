@@ -1,4 +1,6 @@
 {
+"Url":"http://myip.com",
+"Port":":8080",
 "Server":"myserver:444",
 "Name":"myname",
 "User":"myname",
