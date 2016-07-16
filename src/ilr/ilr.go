@@ -79,7 +79,6 @@ func server() {
 }
 
 func main() {
-go server()
 file, err := os.Open("/etc/ircconfig.txt")
  if err != nil {
  log.Fatal(err)
@@ -99,6 +98,9 @@ f, err := os.Create("/var/log/irclog.txt")
 if err != nil {
  log.Fatal(err)
 }
+f.WriteString("<html>\n")
+f.WriteString("<title> uruk bot </title>\n")
+go server()
     con := irc.IRC(all.Name, all.User)
 con.Password = all.Password
 
