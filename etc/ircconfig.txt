@@ -3,7 +3,7 @@
 "Port":":8080",
 "Server":"myserver:444",
 "Name":"myname",
-"User":"myname",
+"User":"myuser",
 "Password":"mypassword",
 "RoomName":"#emacs"
 }

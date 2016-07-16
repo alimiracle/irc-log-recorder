@@ -47,9 +47,13 @@ sudo ./install
 to config the programme 
 open /etc/ircconfig.txt as root
 sudo nano /etc/ircconfig.txt
+replace http://myip.com/  with your server host
+if your host is local
+Type http://localhost/
+replace 8080 with your server port You want your bot listen to it
 
-replace my server:444 with your irc server and port
-replace my name with your bot name
+replace myserver:444 with your irc server and port
+replace myname with your bot name
 replace myuser with your bot user name
 replace mypassword  with your bot password
 
