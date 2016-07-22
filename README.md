@@ -47,6 +47,7 @@ sudo ./install
 to config the programme 
 open /etc/ircconfig.txt as root
 sudo nano /etc/ircconfig.txt
+replace urukbot with your bot web page
 replace http://myip.com/  with your server host
 if your host is local
 Type http://localhost/

@@ -27,6 +27,7 @@ import (
  "log"
 )
 type CONFIG struct {
+Title string
 Url string
 Port string
 Server string
@@ -101,7 +102,9 @@ if err != nil {
  log.Fatal(err)
 }
 f.WriteString("<html>\n")
-f.WriteString("<title> uruk bot </title>\n")
+f.WriteString("<title> ")
+f.WriteString(all.Title)
+f.WriteString(" </title>\n")
 go server(all.Url, all.Port)
     con := irc.IRC(all.Name, all.User)
 con.Password = all.Password
