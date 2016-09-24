@@ -1,82 +1,48 @@
-irc log recorder is irc bot to  Watching Everything that happens in the irc channel 
-and record it in log.
-and its have web server To enable users to access the logs from Web Browser and telnet.
+# UrukCloudIDE
+UrukCloudIDE is a free as in freedom cloud IDE
 
-To install the program:
-1- you nede install golang to build it.
-
-Installing golang:
-In rpm distributions:
-
-You can quickly install golang on your os through the command line interface with:
-
-sudo dnf -y install golang
-
-Installing golang in deb distributions:
-
-You can quickly install golang on your os through the command line interface with:
-
-sudo apt-get install golang
-
-Installing golang in Arch distribution:
-
-You can quickly install golang on your os through the command line interface with:
-
-sudo pacman -S golang 
+# Copyright (c) 2015-2016 azzen abidi <azzen.abidi@gmail.com>
 
 
-2- Download the program from this link:
+# Minimal System Requirements
+- PHP 5.6 or above.
+- A unix like os
+- Web Server (like apache or nginx )
+- database server (like mysql server)
+- Shellinbox (Optional )
 
- https://notabug.org/alimiracle/irc-log-recorder
- 
-then extract it ( in home folder recomended ).
+# Installation
+1. Extract the tarball into a location readable by your web server
+2. Point your browser to http://yourhost/Install/install.html to begin the   database installation process
+3. enter the credentials to access the database
+4.  Click install
+5. Remove Install-tmp and head back to the root URL
+6. Congratulation you have successfully setup UrukCloudIDE. Happy coding!
 
-or if you have git  run this command from terminal :
+# Login
+UrukCloudIDE supports Administrators and regular Users who can use the IDE. To connect as an administrator, use those credinals :
+username : azzenovic
+ password : test
 
-git clone  https://notabug.org/alimiracle/irc-log-recorder
+Once connected, you can add users and change your admin password.
 
-then go to program folder by typing:
+# Known Issues
+- Unable to send multiple ajax requests
 
-  cd irc-log-recorder
-  
-then type:
+# Trouble:
 
-chmod +x install
-sudo ./install
+All efforts have been made to ensure the smooth and correct running of this application.
+If you find that UrukCloudIDE is behaving abnormaly though, there are 3 options :
 
-to config the programme 
-open /etc/ircconfig.txt as root
-sudo nano /etc/ircconfig.txt
-replace urukbot with your bot web page
-replace http://myip.com/  with your server host
-if your host is local
-Type http://localhost/
-replace 8080 with your server port You want your bot listen to it
+1) Turn it off and run away. Not an option I would advise.
 
-replace myserver:444 with your irc server and port
-replace myname with your bot name
-replace myuser with your bot user name
-replace mypassword  with your bot password
+2) Write a harsh comment that says how this app is a pile of **** and you can't believe I
+even dared to waste your time.. Again, not a great option, but it does make me laugh when I
+read some of the stuff.. :-)
 
-replace #emacs with your irc channel
+3) file a bug  with error type and any other
+information you think is relevant, and I'll fix it. Jackpot.
 
-then save the file
-now you can run the bot 
-type irl to run it
-and You can reach the log from http://yourip:8080
-replace yourip with your Computer IP
-and if you have good Internet 
-you can make all the world se the log by link your ip with domain 
-
-Trouble: 
-All efforts have been made to ensure the smooth and correct running of this application. 
-If you find that irc log recorder is behaving abnormaly though, there are 3 options : 
-1) Turn it off and run away. Not an option I would advise. 
-2) Write a harsh comment that says how this app is a pile of **** and you can't believe I 
-even dared to waste your time.. Again, not a great option, but it does make me laugh when I 
-read some of the stuff.. :-) 
-3) Send me a short email with error type and any other 
-information you think is relevant, and I'll fix it. Jackpot. 
-When I find a bug, I crush it. If I don't find it, and you do, and don't tell me, it lives and we all 
-lose.. I'm not a mind-reader. Or a Computer-reader. I'm not one of the X-Men. 
-i'm alimiracle
+When I find a bug, I crush it. If I don't find it, and you do, and don't tell me, it lives and we all
+lose.. I'm not a mind-reader. Or a Computer-reader. I'm not one of the X-Men.
+i'm Azzen Abidi
